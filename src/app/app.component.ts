@@ -21,4 +21,14 @@ export class AppComponent {
     age: 20,
     img: 'https://netstorage-sportsbrief.akamaized.net/images/7325ee45ef6e709c.jpg?imwidth=900'
   }
+
+  //event for toggle btnDisabled property
+  toggleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  //event for increase age roperty
+  increaseAge(){
+    this.age++;
+  }
 }
