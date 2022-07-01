@@ -31,4 +31,16 @@ export class AppComponent {
   increaseAge(){
     this.age++;
   }
+
+  //evet for capture scroll event
+  onScroll(event: Event){
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop);
+  }
+
+  //event for change name property
+  onChangeInput(event: Event){
+    const element = event.target as HTMLInputElement;
+    this.name = element.value;
+  }
 }
