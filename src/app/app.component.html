@@ -1,3 +1,9 @@
+<h1>NgModel</h1>
+<p>Name:</p>
+<input placeholder="NgModel" required #nameInput="ngModel" type="text" [(ngModel)]="person.name">
+<p>Is valid: {{ nameInput.valid }}</p>
+<input placeholder="NgModel" required #ageInput="ngModel" max="18" min="9" type="number" [(ngModel)]="person.age">
+<p>Is valid: {{ ageInput.valid }}</p>
 <h1>EVENTOS</h1>
 <button [disabled]="btnDisabled">Send</button>
 <button (click)="toggleButton()">Toggle button</button>
