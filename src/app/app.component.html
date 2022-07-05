@@ -1,4 +1,15 @@
-<h1>NgIf</h1>
+<h1>*NgFor</h1>
+<input placeholder="Input for ngfor test" type="text" [(ngModel)]="newname">
+<button (click)="addname()">Add name</button>
+<ul>
+  <li *ngIf="names.length == 0">There isn't names!</li>
+  <li *ngFor="let name of names; index as i">
+    {{name}}, is in position {{i}}
+    <button (click)="deleteItem(i)">Delete</button>
+  </li>
+</ul>
+
+<h1>*NgIf</h1>
 <input placeholder="Input for ngif test" type="text" [(ngModel)]="person.name">
 <p *ngIf="person.name == 'Javier'; else elseBlock">My name is equal to Javier</p>
 <ng-template #elseBlock>

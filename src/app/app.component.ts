@@ -22,6 +22,10 @@ export class AppComponent {
     img: 'https://netstorage-sportsbrief.akamaized.net/images/7325ee45ef6e709c.jpg?imwidth=900'
   }
 
+  names: string[] = ["Javier", "Fernando", "Flores", "Cárdenas"];
+
+  newname:string = "";
+
   //event for toggle btnDisabled property
   toggleButton(){
     this.btnDisabled = !this.btnDisabled;
@@ -42,5 +46,16 @@ export class AppComponent {
   onChangeInput(event: Event){
     const element = event.target as HTMLInputElement;
     this.name = element.value;
+  }
+
+  //event for add name in names list
+  addname(){
+    this.names.push(this.newname);
+    this.newname = "";
+  }
+
+  //event for delete in names list
+  deleteItem(index: number){
+    this.names.splice(index, 1);
   }
 }
