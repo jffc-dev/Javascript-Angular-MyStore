@@ -1,7 +1,6 @@
 <h1>*NgFor Objects</h1>
 <ul>
   <li *ngFor="let product of products; index as i">
-    {{name}}, is in position {{i}}
     <img [src]="product.image" alt="image">
     <h2>{{product.name}}</h2>
     <p>{{product.price}}</p>
