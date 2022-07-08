@@ -1,11 +1,11 @@
 <h1>*NgFor Objects</h1>
-<ul>
-  <li *ngFor="let product of products; index as i">
-    <img [src]="product.image" alt="image">
+<div class="container-products">
+  <div *ngFor="let product of products; index as i" class="div-product">
+    <img [src]="product.image" alt="image" class="img-product">
     <h2>{{product.name}}</h2>
     <p>{{product.price}}</p>
-  </li>
-</ul>
+  </div>
+</div>
 
 <h1>*NgFor</h1>
 <input placeholder="Input for ngfor test" type="text" [(ngModel)]="newname">
