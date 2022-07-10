@@ -1,3 +1,11 @@
+<h1>*NgFor Objects Style binding</h1>
+<div class="products--grid">
+  <div *ngFor="let product of products; index as i">
+    <img [src]="product.image" alt="image">
+    <h2>{{product.name}}</h2>
+    <p>{{product.price}}</p>
+  </div>
+</div>
 <!-- Publishing in stackblitz was tried, but it was not work correctly due to the image links -->
 <input
   placeholder="Enter the name of your favorite player"
