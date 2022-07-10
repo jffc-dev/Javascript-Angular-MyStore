@@ -28,33 +28,33 @@ export class AppComponent {
 
   products = [
     {
-      name: 'EL mejor juguete',
+      name: 'The best toy',
       price: 565,
       image: './assets/images/toy.jpg',
       category: 'all',
     },
     {
-      name: 'Bicicleta casi nueva',
+      name: 'Almost new bike',
       price: 356,
       image: './assets/images/bike.jpg'
     },
     {
-      name: 'Colleción de albumnes',
+      name: 'Album collection',
       price: 34,
       image: './assets/images/album.jpg'
     },
     {
-      name: 'Mis libros',
+      name: 'My books',
       price: 23,
       image: './assets/images/books.jpg'
     },
     {
-      name: 'Casa para perro',
+      name: 'Dog\'s house',
       price: 34,
       image: './assets/images/house.jpg'
     },
     {
-      name: 'Gafas',
+      name: 'Glasses',
       price: 3434,
       image: './assets/images/glasses.jpg'
     }
@@ -73,7 +73,6 @@ export class AppComponent {
   //evet for capture scroll event
   onScroll(event: Event){
     const element = event.target as HTMLElement;
-    console.log(element.scrollTop);
   }
 
   //event for change name property
