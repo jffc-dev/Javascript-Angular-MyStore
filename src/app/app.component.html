@@ -1,3 +1,12 @@
+<h1>NgSwitch</h1>
+<input placeholder="Input for ngswitch test" type="text" [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Javier'">It's Javier</p>
+  <p *ngSwitchCase="'Fernando'">It's Fernando</p>
+  <p *ngSwitchCase="'Nancy'">It's Nancy</p>
+  <p *ngSwitchDefault>I don't know who is it</p>
+</div>
+
 <h1>*NgFor Objects</h1>
 <div class="container-products">
   <div *ngFor="let product of products; index as i" class="div-product">
