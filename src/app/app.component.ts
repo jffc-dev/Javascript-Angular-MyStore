@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Player } from './player.model';
 import { Product } from './product.model'
 
 @Component({
@@ -91,5 +92,57 @@ export class AppComponent {
   //event for delete in names list
   deleteItem(index: number){
     this.names.splice(index, 1);
+  }
+
+  players: Player[] = [
+    {
+      name: 'Lionel Messi',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/c/c1/Lionel_Messi_20180626.jpg',
+      birthdayDate: new Date(),
+    },
+    {
+      name: 'Cristiano Ronaldo',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/9/9a/Cristiano_Ronaldo_Portugal.jpg',
+      birthdayDate: new Date(),
+    },
+    {
+      name: 'Mohammed Salah',
+      image:
+        'https://s.hs-data.com/bilder/spieler/gross/173692.jpg',
+      birthdayDate: new Date(),
+    },
+    {
+      name: 'Luis Diaz',
+      image:
+        'https://strikers.futbol/__export/1657251014008/sites/strikers/img/2022/07/08/luisdiaz.jpg_1301049368.jpg',
+      birthdayDate: new Date(),
+    },
+    {
+      name: 'Luis Suarez',
+      image:
+        'https://s.hs-data.com/bilder/spieler/gross/43635.jpg?fallback=png',
+      birthdayDate: new Date(),
+    },
+    {
+      name: 'Ronaldinho',
+      image:
+        'https://www.fcbarcelona.com/photo-resources/2020/04/14/f6fa290e-c547-4b33-8390-6ad8d07e8720/RONALDINHO.png?width=600&height=820',
+      birthdayDate: new Date(),
+      retirementDate: new Date()
+    },
+  ];
+  playersFiltered: Player[] = [];
+  search: string = '';
+
+  //event for search input change
+  changeSearch(event: Event) {
+    const element = event.target as HTMLInputElement;
+    this.search = element.value;
+
+    this.playersFiltered = this.players.filter((player) =>
+      player.name.toLowerCase().includes(element.value.toLowerCase()) && element.value.length > 0
+    );
   }
 }

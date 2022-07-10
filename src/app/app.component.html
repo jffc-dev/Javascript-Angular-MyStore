@@ -1,3 +1,24 @@
+<!-- Publishing in stackblitz was tried, but it was not work correctly due to the image links -->
+<input
+  placeholder="Enter the name of your favorite player"
+  (keyup)="changeSearch($event)"
+/>
+<p>{{ search }}</p>
+<p *ngIf="playersFiltered.length == 0 && search.length > 0">No players with the name: "{{search}}", were found.</p>
+<p *ngIf="search.length == 0">Enter the name of your favorite player.</p>
+<div class="players-div">
+  <div *ngFor="let player of playersFiltered" class="player-div" [ngStyle]="{'background-color': (player.retirementDate) ? 'red' : 'green'}">
+    <div class="player-img-div">
+      <img src="{{ player.image }}" class="player-img"/>
+    </div>
+    <div class="player-data">
+      <div class="player-data-div">
+        <h2>{{player.name}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
 <h1>NgSwitch</h1>
 <input placeholder="Input for ngswitch test" type="text" [(ngModel)]="person.name">
 <div [ngSwitch]="person.name">
